@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var loading = 0;
   var id = setInterval(frame, 64);
 

@@ -4,28 +4,28 @@ document.getElementById("link").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("http://127.0.0.1:5500/html/about.html");
+    window.location.replace("../html/about.html");
   }, 1100);
 });
 document.getElementById("link2").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("http://127.0.0.1:5500/html/portfolio.html");
+    window.location.replace("../html/portfolio.html");
   }, 1100);
 });
 document.getElementById("link3").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("http://127.0.0.1:5500/html/Gallery.html");
+    window.location.replace("../html/Gallery.html");
   }, 1100);
 });
 document.getElementById("link4").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("http://127.0.0.1:5500/html/contact.html");
+    window.location.replace("../html/contact.html");
   }, 1100);
 });
 
@@ -36,7 +36,7 @@ document.getElementById("proj").addEventListener("click", function () {
     body.style.backgroundColor = "#ba6c58";
   }, 100);
   setTimeout(function () {
-    window.location.replace("http://127.0.0.1:5500/html/proj.html");
+    window.location.replace("../html/proj.html");
   }, 2200);
 });
 document.getElementById("proj2").addEventListener("click", function () {
