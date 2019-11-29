@@ -1,0 +1,54 @@
+html,
+body {
+  background-color: #0c0c0c;
+}
+
+.load {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader_gif {
+  display: block;
+  margin: 0 auto;
+}
+
+.bar_container {
+  display: block;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+#myProgress {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 12px;
+  background-color: #0c0c0c;
+}
+
+#myBar {
+  border-radius: 12px;
+  width: 1%;
+  height: 12px;
+  background-color: #96dbd9;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
