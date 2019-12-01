@@ -1,9 +1,16 @@
 @import "reset.css";
 
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   background-color: #0c0c0c;
   color: white;
+  overflow: hidden; /* Hide scrollbars */
 }
+
 body {
   transition-property: background-color;
   transition-duration: 1s;
@@ -29,7 +36,9 @@ button {
 }
 
 .padding_border {
-  padding: 90px 90px 0 90px;
+  display: grid;
+  height: 100%;
+	padding: 90px;
 }
 
 .title {
@@ -130,7 +139,7 @@ footer {
   width: 960px;
   height: 400px;
   overflow: hidden;
-  margin: 100px auto 0px;
+  margin: 0 auto 0px;
 }
 
 .but {
@@ -161,7 +170,7 @@ footer {
     overflow: scroll;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 999px) {
   .slide {
     display: none;
   }
@@ -172,6 +181,9 @@ footer {
   }
   footer {
     margin-top: 0;
+  }
+  .title{
+    margin-bottom: 24px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -199,7 +211,7 @@ footer {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 1000px) {
   .grider {
     -ms-grid-rows: (1fr) [4];
     grid-template-rows: repeat(4, 1fr);
@@ -218,7 +230,7 @@ footer {
   margin: 8px;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 1000px) {
   .grid-1 {
     -ms-grid-column: 1;
     grid-column-start: 1;
@@ -240,7 +252,7 @@ footer {
   margin: 8px;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 1000px) {
   .grid-2 {
     -ms-grid-column: 1;
     grid-column-start: 1;
@@ -261,7 +273,7 @@ footer {
   margin: 8px;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 1000px) {
   .grid-3 {
     -ms-grid-column: 1;
     grid-column-start: 1;
@@ -282,7 +294,7 @@ footer {
   margin: 8px;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 1000px) {
   .grid-4 {
     -ms-grid-column: 1;
     grid-column-start: 1;

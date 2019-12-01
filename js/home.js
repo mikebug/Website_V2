@@ -1,6 +1,6 @@
 const element = document.getElementById("body");
 element.classList.add("animated", "fadeInUp");
-document.getElementById("link").addEventListener("click", function () {
+document.getElementById("link1").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
