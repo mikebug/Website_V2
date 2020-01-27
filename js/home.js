@@ -69,25 +69,3 @@ document.getElementById("proj4").addEventListener("click", function () {
     window.location.replace("#");
   }, 2200);
 });
-
-$(function () {
-  var $slides = $(".slide");
-  var currentSlide = 0;
-  TweenLite.set($slides.filter(":gt(0)"), { left: "960px" });
-  TweenLite.delayedCall(4, nextSlide);
-  function nextSlide() {
-    TweenLite.to($slides.eq(currentSlide), 1, { left: "-960px" });
-    if (currentSlide < $slides.length - 1) {
-      currentSlide++;
-    } else {
-      currentSlide = 0;
-    }
-    TweenLite.fromTo(
-      $slides.eq(currentSlide),
-      1,
-      { left: "960px" },
-      { left: "0px" }
-    );
-    TweenLite.delayedCall(4, nextSlide);
-  }
-});
