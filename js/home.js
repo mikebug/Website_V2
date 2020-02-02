@@ -29,7 +29,7 @@ document.getElementById("link4").addEventListener("click", function () {
   }, 1100);
 });
 
-document.getElementById("proj").addEventListener("click", function () {
+/* document.getElementById("proj").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOut");
   setTimeout(function () {
@@ -69,3 +69,4 @@ document.getElementById("proj4").addEventListener("click", function () {
     window.location.replace("#");
   }, 2200);
 });
+*/
