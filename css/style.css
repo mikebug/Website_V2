@@ -1,6 +1,6 @@
 html,
 body {
-  background-color: #0c0c0c;
+  background-color: #ffffff;
 }
 
 .load {
@@ -16,7 +16,7 @@ body {
 
 .loader_gif {
   display: block;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .bar_container {
@@ -30,14 +30,14 @@ body {
   margin: 0 auto;
   width: 100%;
   border-radius: 12px;
-  background-color: #0c0c0c;
+  background-color: #ffffff;
 }
 
 #myBar {
   border-radius: 12px;
   width: 1%;
   height: 12px;
-  background-color: #96dbd9;
+  background-image:url(/assets/source.gif);
 }
 
 body {
