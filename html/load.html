@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Michael Buglione</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/script.js"></script>
-  </head>
-  <body>
-    <section id="load" class="load">
-      <div class="bar_container">
-        <img
-          class="loader_gif"
-          id="loader_gif"
-          src="/assets/pizza.gif"
-          alt="gif"
-        />
-        <div id="myProgress">
-          <div id="myBar"></div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Michael Buglione</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/script.js"></script>
+</head>
+
+<body>
+  <section id="load" class="load">
+    <div class="bar_container">
+      <img class="loader_gif" id="loader_gif" src="/assets/pizza.gif" alt="gif" />
+      <div id="myProgress">
+        <div id="myBar"></div>
       </div>
-      <script>
-        var i = 0;
-        if (i == 0) {
-          i = 1;
-          var elem = document.getElementById("myBar");
-          var width = 1;
-          var id = setInterval(frame, 10);
-          function frame() {
-            if (width >= 100) {
-              clearInterval(id);
-              i = 0;
-            } else {
-              width = width + 0.5;
-              elem.style.width = width + "%";
-            }
+    </div>
+    <script>
+      var i = 0;
+      if (i == 0) {
+        i = 1;
+        var elem = document.getElementById("myBar");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width = width + 0.5;
+            elem.style.width = width + "%";
           }
         }
-      </script>
-    </section>
-  </body>
+      }
+    </script>
+  </section>
+</body>
+
 </html>

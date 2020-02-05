@@ -2,6 +2,10 @@ html,
 body {
   background-color: #ffffff;
 }
+canvas {
+  display: block;
+  margin: 50px auto;
+}
 
 .load {
   position: absolute;
