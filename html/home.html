@@ -1,123 +1,164 @@
 <!DOCTYPE html>
 <html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Michael Buglione</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+  </head>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Michael Buglione</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/home.css" />
-  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-</head>
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-<body>
-  <div id="body" class="padding_border">
-    <h1 id="title" class="title">
-      <a class="name" id="link" href="#">Michael Buglione</a>
-    </h1>
-    <div class="container">
-    <div class="tiles"><a class="tile alink" href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/1.jpg"/>
-      <div class="details"><span class="title2 alink">About</span><span class="info">Quisque vel felis lectus donec vitae dapibus magna</span></div></a><a id="link1" class="tile alink" href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/2.jpg"/>
-      <div class="details"><span class="title2 alink">Portfolio</span><span class="info">Quisque vel felis lectus donec vitae dapibus magna</span></div></a><a class="tile alink" href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/3.jpg"/>
-      <div class="details"><span class="title2 alink">Gallery</span><span class="info">Quisque vel felis lectus donec vitae dapibus magna</span></div></a><a class="tile alink" href="#"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/4.jpg"/>
-      <div class="details"><span class="title2 alink">Contact</span><span class="info">Quisque vel felis lectus donec vitae dapibus magna</span></div></a></div>
-   </div> 
-   <footer>
-      <ul>
-        <li>
-          <a id="link1" class="link" href="#">About</a>
-        </li>
-        <li>
-          <a id="link2" class="link" href="#">Portfolio</a>
-        </li>
-        <li>
-          <a id="link3" class="link" href="#">Gallery</a>
-        </li>
-        <li>
-          <a id="link4" class="link" href="#">Contact</a>
-        </li>
-      </ul>
-    </footer>
-  </div>
-  <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-  <script src="../js/home.js"></script>
-  <script>
-    var cursor = $(".cursor"),
-    follower = $(".cursor-follower");
-    
-    var posX = 0,
+  <body>
+    <div id="body" class="padding_border">
+      <h1 id="title" class="title">
+        <a class="name" id="link" href="#">Michael Buglione</a>
+      </h1>
+      <div class="container">
+        <div class="tiles">
+          <a class="tile alink" id="link1" href="#"
+            ><img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/1.jpg"
+            />
+            <div class="details">
+              <span class="title2 alink">About</span
+              ><span class="info"
+                >What I'm doing with my life right know and my future
+                projects.</span
+              >
+            </div> </a
+          ><a id="link2" class="tile alink" href="#"
+            ><img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/2.jpg"
+            />
+            <div class="details">
+              <span class="title2 alink">Portfolio</span
+              ><span class="info"
+                >Looking for a Front-End Developer/Designer?</span
+              >
+            </div> </a
+          ><a class="tile alink" id="link3" href="#"
+            ><img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/3.jpg"
+            />
+            <div class="details">
+              <span class="title2 alink">Gallery</span
+              ><span class="info"
+                >A photo gallery of my trips, life, and projects!</span
+              >
+            </div> </a
+          ><a class="tile alink" id="link4" href="#"
+            ><img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/216995/4.jpg"
+            />
+            <div class="details">
+              <span class="title2 alink">Contact</span
+              ><span class="info"
+                >Need to get in touch with me checkout how to get in
+                contact.</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      <footer>
+        <ul>
+          <li>
+            <a id="link5" class="link" href="#">About</a>
+          </li>
+          <li>
+            <a id="link6" class="link" href="#">Portfolio</a>
+          </li>
+          <li>
+            <a id="link7" class="link" href="#">Gallery</a>
+          </li>
+          <li>
+            <a id="link8" class="link" href="#">Contact</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="../node_modules/gsap/umd/TweenMax.js"></script>
+    <script src="../js/home.js"></script>
+    <script>
+      var cursor = $(".cursor"),
+        follower = $(".cursor-follower");
+
+      var posX = 0,
         posY = 0;
-    
-    var mouseX = 0,
+
+      var mouseX = 0,
         mouseY = 0;
-    
-    TweenMax.to({}, 0.016, {
-      repeat: -1,
-      onRepeat: function() {
-        posX += (mouseX - posX) / 9;
-        posY += (mouseY - posY) / 9;
-    
-        TweenMax.set(follower, {
+
+      TweenMax.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function() {
+          posX += (mouseX - posX) / 9;
+          posY += (mouseY - posY) / 9;
+
+          TweenMax.set(follower, {
             css: {
-            left: posX - 12,
-            top: posY - 12
+              left: posX - 12,
+              top: posY - 12
             }
-        });
-    
-        TweenMax.set(cursor, {
+          });
+
+          TweenMax.set(cursor, {
             css: {
-            left: mouseX,
-            top: mouseY
+              left: mouseX,
+              top: mouseY
             }
-        });
-      }
-    });
-    
-    $(document).on("mousemove", function(e) {
+          });
+        }
+      });
+
+      $(document).on("mousemove", function(e) {
         mouseX = e.clientX;
         mouseY = e.clientY;
-    });
-    // WHITE circle
-    $(".link").on("mouseenter", function() {
+      });
+      // WHITE circle
+      $(".link").on("mouseenter", function() {
         cursor.addClass("active");
         follower.addClass("active");
-    });
-    $(".link").on("mouseleave", function() {
+      });
+      $(".link").on("mouseleave", function() {
         cursor.removeClass("active");
         follower.removeClass("active");
-    });
-    $(".name").on("mouseenter", function() {
+      });
+      $(".name").on("mouseenter", function() {
         cursor.addClass("active");
         follower.addClass("active");
-    });
-    $(".name").on("mouseleave", function() {
+      });
+      $(".name").on("mouseleave", function() {
         cursor.removeClass("active");
         follower.removeClass("active");
-    });
-     // WHITE circle
-     $(".alink").on("mouseenter", function() {
+      });
+      // WHITE circle
+      $(".alink").on("mouseenter", function() {
         cursor.addClass("white");
         follower.addClass("white");
-    });
-    $(".alink").on("mouseleave", function() {
+      });
+      $(".alink").on("mouseleave", function() {
         cursor.removeClass("white");
         follower.removeClass("white");
-    });
-         // WHITE circle
-         $(".details").on("mouseenter", function() {
+      });
+      // WHITE circle
+      $(".details").on("mouseenter", function() {
         cursor.addClass("black");
         follower.addClass("black");
-    });
-    $(".details").on("mouseleave", function() {
+      });
+      $(".details").on("mouseleave", function() {
         cursor.removeClass("black");
         follower.removeClass("black");
-    });
-
+      });
     </script>
-</body>
-
+  </body>
 </html>

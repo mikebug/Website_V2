@@ -20,8 +20,20 @@ button {
   overflow: hidden;
 }
 
-.padding_border {
-  padding: 90px 90px 0 90px;
+.padding_border_1 {
+  width: 50%;
+  display: flexbox;
+}
+
+.padding_border_2 {
+  width: 100%;
+  display: flexbox;
+  margin: 0;
+}
+
+.Selfie {
+  width: 100%;
+  position: relative;
 }
 
 .title {
@@ -90,4 +102,15 @@ ol {
 .me {
   float: right;
   width: 300px;
+}
+.column {
+  float: right;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
