@@ -1,9 +1,19 @@
 @import "reset.css";
 
+html,
+body {
+  height: 100%;
+}
+
+.row {
+  padding: 100px;
+}
+
 body {
   background-color: #ffffff;
   color: #333333;
-  overflow: hidden; /* Hide scrollbars */
+  overflow-x: hidden;
+  /* Hide scrollbars */
 }
 
 .body {
@@ -12,27 +22,28 @@ body {
   will-change: "opacity, transform";
 }
 
+.img_container {
+  height: 100px;
+}
+
 button {
   all: none;
+}
+
+.height {
+  height: 100%;
 }
 
 #about {
   overflow: hidden;
 }
 
-.padding_border_1 {
-  width: 50%;
-  display: flexbox;
-}
-
-.padding_border_2 {
-  width: 100%;
-  display: flexbox;
-  margin: 0;
-}
 
 .Selfie {
-  width: 100%;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: block;
   position: relative;
 }
 
@@ -40,6 +51,8 @@ button {
   width: 108px;
   font-size: 24px;
 }
+
+.padding {}
 
 .title:after {
   background: none repeat scroll 0 0 transparent;
@@ -63,9 +76,9 @@ button {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 20px;
   width: 100%;
-  padding: 32px;
   will-change: "opacity, transform";
   line-height: 22px;
+
 }
 
 .name {
@@ -95,22 +108,18 @@ li {
   margin-left: 36px;
 }
 
-ol {
-  margin: 24px;
-}
-
 .me {
-  float: right;
+  float: left;
   width: 300px;
 }
+
 .column {
-  float: right;
+  float: left;
   width: 50%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
