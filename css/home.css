@@ -50,6 +50,67 @@ button {
   border-width: 1px;
 }
 
+
+@media only screen and (max-width: 720px) {
+  .padding_border {
+    margin: 1vh auto;
+    border:none;
+    width: 450px;
+  }
+  .container{
+    display: none;
+    padding: 20px 0 20px 0;
+  }
+  body{
+    overflow: auto;
+  }
+  ul{
+    display: grid !important;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .padding_border {
+    margin: 1vh auto;
+    border:none;
+    width: 350px;
+    padding: 5px;
+  }
+  .container{
+    display: none;
+    padding: 20px 0 20px 0;
+  }
+  .Selfie{
+    width: 150px !important;
+    height: 150px !important;
+  }
+  ul{
+    display: grid !important;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .padding_border {
+    margin: 1vh auto;
+    border:none;
+    width: 300px;
+    padding: 0px;
+    margin: 0;
+  }
+  .container{
+    display: none !important;
+    padding: 2px 0 2px 0 !important;
+  }
+  .Selfie{
+    width: 150px !important;
+    height: 150px !important;
+  }
+  ul{
+    display: grid !important;
+  }
+}
+
+
+
 @media only screen and (max-width: 1500px) {
   .padding_border {
     margin: 1vh auto;
