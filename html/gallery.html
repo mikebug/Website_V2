@@ -2,20 +2,86 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Gallery</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/gallery.css">
-    </head>
-    <body>
-        <div id="body" class="padding_border">
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gallery</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/gallery.css">
+</head>
+
+<body>
+    <div id="body" class="padding_border">
         <h1 id="title" class="title">
             <a class="name" id="link" href="#">Michael Buglione</a>
-          </h1></div>
-
-    </body>
+        </h1>
+        <div class="row">
+            <div class="column">
+                <div class="column-xs-12 column-md-6">
+                    <figure class="img-container">
+                        <img src="https://source.unsplash.com/-RBuQ2PK_L8" />
+                    </figure>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-xs-12 column-md-6">
+                    <figure class="img-container">
+                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
+                    </figure>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-xs-12 column-md-6">
+                    <figure class="img-container">
+                        <img src="https://source.unsplash.com/XtUd5SiX464" />
+                    </figure>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column-xs-12 column-md-6">
+                    <figure class="img-container">
+                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
+                    </figure>
+                </div>
+                <div class="column-xs-12 column-md-6">
+                    <figure class="img-container">
+                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
+                    </figure>
+                </div>
+                <div class="column-xs-12 column-md-6">
+                    <figure class="img-container">
+                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
 </html>
