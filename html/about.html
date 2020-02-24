@@ -1,126 +1,137 @@
 <!DOCTYPE html>
 <html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Michael Buglione</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+  </head>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Michael Buglione</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../css/about.css" />
-  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"
-></script>
-<link rel="stylesheet" href="../css/home.css" />
-<link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-</head>
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-
-<body class="animated fadeInUp">
-  <div id="about"  class="row">
+  <body class="animated fadeInUp">
+    <div id="about" class="row">
       <h1 id="title" class="title">
         <a class="name" id="link" href="#">Michael Buglione</a>
       </h1>
-        <img class="Selfie" src="../assets/Screen Shot 2020-01-28 at 1.32.07 PM.png" alt="Selfie" />
-        <h1 class="aboutMe">Who Am I?</h1>
+      <img
+        class="Selfie"
+        src="../assets/Screen Shot 2020-01-28 at 1.32.07 PM.png"
+        alt="Selfie"
+      />
+      <h1 class="aboutMe">Who Am I?</h1>
       <h2 class="about">
         I am a Full-Stack/Frontend developer based in Buffalo NY. I am
-        interested in interactive design, user experience and new
-        technologies. I like art, music, and martial arts. Graduating with a
-        general engineering degree in software engineering gives me a great
-        understanding of many different sciences and engineering subjects. 
-        To round myself out even more, I also have a minor in
-        pre-law and have skills in visual arts, such as drawing, film, and
-        graphic design. Currently, I am working in TDP program at M&T Bank. 
-        Most days I'm either playing my Bass, Practice Muay Thai, Working on an art project or doing leet cod.  
-      </h2> 
+        interested in interactive design, user experience and new technologies.
+        I like art, music, and martial arts. Graduating with a general
+        engineering degree in software engineering gives me a great
+        understanding of many different sciences and engineering subjects. To
+        round myself out even more, I also have a minor in pre-law and have
+        skills in visual arts, such as drawing, film, and graphic design.
+        Currently, I am working in TDP program at M&T Bank. Most days I'm either
+        playing my Bass, Practice Muay Thai, Working on an art project or doing
+        leet cod.
+      </h2>
       <div class="contain">
-        <div class="box">A</div>
-        <div class="box">B</div>
-        <div class="box">C</div>
-        <div class="box">D</div>
+        <div class="box">
+          <img class="img_logo" src="/assets/LeetCode_logo.png" alt="" />
+        </div>
+        <div class="box">
+          <img class="img_logo" src="/assets/LeetCode_logo.png" alt="" />
+        </div>
+        <div class="box">
+          <img class="img_logo" src="/assets/LeetCode_logo.png" alt="" />
+        </div>
+        <div class="box">
+          <img class="img_logo" src="/assets/LeetCode_logo.png" alt="" />
+        </div>
       </div>
     </div>
-  <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-  <script src="../js/about.js"></script>
-  <script>
-    var cursor = $(".cursor"),
-      follower = $(".cursor-follower");
+    <script src="../node_modules/gsap/umd/TweenMax.js"></script>
+    <script src="../js/about.js"></script>
+    <script>
+      var cursor = $(".cursor"),
+        follower = $(".cursor-follower");
 
-    var posX = 0,
-      posY = 0;
+      var posX = 0,
+        posY = 0;
 
-    var mouseX = 0,
-      mouseY = 0;
+      var mouseX = 0,
+        mouseY = 0;
 
-    TweenMax.to({}, 0.016, {
-      repeat: -1,
-      onRepeat: function() {
-        posX += (mouseX - posX) / 9;
-        posY += (mouseY - posY) / 9;
+      TweenMax.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function() {
+          posX += (mouseX - posX) / 9;
+          posY += (mouseY - posY) / 9;
 
-        TweenMax.set(follower, {
-          css: {
-            left: posX - 12,
-            top: posY - 12
-          }
-        });
+          TweenMax.set(follower, {
+            css: {
+              left: posX - 12,
+              top: posY - 12
+            }
+          });
 
-        TweenMax.set(cursor, {
-          css: {
-            left: mouseX,
-            top: mouseY
-          }
-        });
-      }
-    });
+          TweenMax.set(cursor, {
+            css: {
+              left: mouseX,
+              top: mouseY
+            }
+          });
+        }
+      });
 
-    $(document).on("mousemove", function(e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-    // WHITE circle
-    $(".link").on("mouseenter", function() {
-      cursor.addClass("active");
-      follower.addClass("active");
-    });
-    $(".link").on("mouseleave", function() {
-      cursor.removeClass("active");
-      follower.removeClass("active");
-    });
-    $(".name").on("mouseenter", function() {
-      cursor.addClass("active");
-      follower.addClass("active");
-    });
-    $(".name").on("mouseleave", function() {
-      cursor.removeClass("active");
-      follower.removeClass("active");
-    });
-    // WHITE circle
-    $(".alink").on("mouseenter", function() {
-      cursor.addClass("white");
-      follower.addClass("white");
-    });
-    $(".alink").on("mouseleave", function() {
-      cursor.removeClass("white");
-      follower.removeClass("white");
-    });
-    // WHITE circle
-    $(".details").on("mouseenter", function() {
-      cursor.addClass("black");
-      follower.addClass("black");
-    });
-    $(".details").on("mouseleave", function() {
-      cursor.removeClass("black");
-      follower.removeClass("black");
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="../js/particle.js"></script>
-</body>
-
+      $(document).on("mousemove", function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      // WHITE circle
+      $(".link").on("mouseenter", function() {
+        cursor.addClass("active");
+        follower.addClass("active");
+      });
+      $(".link").on("mouseleave", function() {
+        cursor.removeClass("active");
+        follower.removeClass("active");
+      });
+      $(".name").on("mouseenter", function() {
+        cursor.addClass("active");
+        follower.addClass("active");
+      });
+      $(".name").on("mouseleave", function() {
+        cursor.removeClass("active");
+        follower.removeClass("active");
+      });
+      // WHITE circle
+      $(".alink").on("mouseenter", function() {
+        cursor.addClass("white");
+        follower.addClass("white");
+      });
+      $(".alink").on("mouseleave", function() {
+        cursor.removeClass("white");
+        follower.removeClass("white");
+      });
+      // WHITE circle
+      $(".details").on("mouseenter", function() {
+        cursor.addClass("black");
+        follower.addClass("black");
+      });
+      $(".details").on("mouseleave", function() {
+        cursor.removeClass("black");
+        follower.removeClass("black");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="../js/particle.js"></script>
+  </body>
 </html>
