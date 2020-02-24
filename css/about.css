@@ -1,4 +1,5 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700');
 
 html,
 body {
@@ -43,6 +44,10 @@ canvas {
   body{
     overflow: auto;
   }
+  .Selfie{
+    width: 18rem !important;
+    height: 18rem !important;
+  }
 }
 
 
@@ -54,6 +59,16 @@ canvas {
   }
   body{
     overflow: auto;
+  }
+  .contain {
+    width:100px !important;
+    height:100px !important;
+    margin: auto;
+  }
+  .box {
+    width:100px !important;
+    height:100px !important;
+    margin: auto;
   }
 }
 
@@ -70,4 +85,50 @@ canvas {
   }
 
 }
+
+.Selfie{
+  margin: 25px;
+  height: 20rem;
+  width: 20rem;
+}
+
+.aboutMe{
+  font-size: 24px;
+  padding: 25px;
+}
+
+.about {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.contain{
+  margin: 20px auto;
+  width:400px;
+  height:400px;
+  background-color:#fff;
+  display:grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.contain .box{
+    background-color:#333;
+    padding:20px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+  }
 
