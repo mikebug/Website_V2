@@ -1,16 +1,15 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
 
-html,
 body {
   height: 100%;
-  height: auto !important;
 }
 /* ---- reset ---- */
 
 body {
   margin: 0;
   background-color: #fff;
+  vertical-align: middle;
 }
 
 canvas {
@@ -30,7 +29,8 @@ canvas {
 .row {
   padding: 50px;
   width: 900px;
-  margin: 50px auto;
+  height: 750px;
+  margin: 18vh auto;
   border: solid #333;
   border-width: 1px;
 }
