@@ -1,0 +1,106 @@
+
+  @import "reset.css";
+  @import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700');
+
+  html,
+  body {
+    height: 100%;
+  }
+  /* ---- reset ---- */
+  ::-webkit-scrollbar {
+    display: none;
+    }
+  body {
+    margin: 0;
+    background-color: #fff;
+  }
+
+  .padding_border{
+      padding: 10rem;
+  }
+
+  .fav{
+    font-size: 24px;
+    text-align: center;
+    padding: 36px 24px 36px;
+    }
+
+.title {
+    width: 108px;
+    font-size: 24px;
+    padding: 24px;
+  }
+  
+  .title:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    background: #333;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  
+  .title:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  
+.more {
+  font-size: 24px;
+  padding: 24px;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  margin-top: 12px;
+}
+
+.more:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  background: #333;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.more:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
+
+  .name {
+    font-family: -apple-system, Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #333;
+  }
+
+  
+  .gallery {
+    margin: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  img{
+    height: 33%;
+    width: 33%;
+  }
+  
+  .img-w{
+    display: inline;
+  }
+  .img-s{
+    height: 100%;
+    width: 100%;
+  }

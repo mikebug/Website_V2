@@ -13,101 +13,119 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/gallery.css">
-    <!-- Magnific Popup core CSS file -->
-<link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/Gallery.js"></script>
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
 
-<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-<!-- Magnific Popup core JS file -->
-<script src="magnific-popup/jquery.magnific-popup.js"></script>
 </head>
 
-<body>
+<body id="body" class="animated fadeInUp">
     <div id="body" class="padding_border">
         <h1 id="title" class="title">
-            <a class="name" id="link" href="#">Michael Buglione</a>
+            <a class="name" id="about" href="#">Michael Buglione</a>
         </h1>
-        <div class="row">
-            <div class="column">
-                <div class="column-xs-12 column-md-6">
-                    <figure class="img-container">
-                        <a class="image-popup-no-margins" href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg">
-                            <img src="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg" width="107" height="75">
-                        </a>
-                    </figure>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column-xs-12 column-md-6">
-                    <figure class="img-container">
-                        <img  src="https://source.unsplash.com/JYGnB9gTCls" />
-                    </figure>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column-xs-12 column-md-6">
-                    <figure class="img-container">
-                        <img src="https://source.unsplash.com/XtUd5SiX464" />
-                    </figure>
-                </div>
-            </div>
-            <div class="column">
-                <div class="column-xs-12 column-md-6">
-                    <figure class="img-container">
-                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
-                    </figure>
-                </div>
-                <div class="column-xs-12 column-md-6">
-                    <figure class="img-container">
-                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
-                    </figure>
-                </div>
-                <div class="column-xs-12 column-md-6">
-                    <figure class="img-container">
-                        <img src="https://source.unsplash.com/JYGnB9gTCls" />
-                    </figure>
-                </div>
-            </div>
+        <h1 class="fav">
+            <p class="name">My Favorites<p>
+        </h1>
+        <div class="gallery">
+            <div class="img-w"><img src="../assets/Japan/1.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/2.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/3.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/27.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/5.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/6.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/13.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/22.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/9.jpg" alt=""/></div>
+ <!--       <div class="img-w"><img src="../assets/Japan/10.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/11.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/12.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/13.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/14.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/15.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/16.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/17.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/18.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/19.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/20.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/21.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/22.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/23.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/24.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/25.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/26.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/27.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/28.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/29.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/30.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/31.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/32.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/33.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/34.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/35.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/36.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/37.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/38.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/39.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/40.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/41.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/42.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/43.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/44.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/45.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/46.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/47.jpg" alt=""/></div>
+            --->
         </div>
+        <h1 id="more" class="more">
+            <a class="name" id="link" href="#">See More</a>
+        </h1>
     </div>
 </body>
 <script>
-        $(document).ready(function() {
-
-        $('.image-popup-vertical-fit').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            mainClass: 'mfp-img-mobile',
-            image: {
-                verticalFit: true
-            }
+$(function() {
+  $(".img-w").each(function() {
+    $(this).wrap("<div class='img-c'></div>")
+    let imgSrc = $(this).find("img").attr("src");
+     $(this).css('background-image', 'url(' + imgSrc + ')');
+  })
             
-        });
+  
+  $(".img-c").click(function() {
+    let w = $(this).outerWidth()
+    let h = $(this).outerHeight()
+    let x = $(this).offset().left
+    let y = $(this).offset().top
+    
+    
+    $(".active").not($(this)).remove()
+    let copy = $(this).clone();
+    copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+    $(".active").css('top', y - 8);
+    $(".active").css('left', x - 8);
+    
+      setTimeout(function() {
+    copy.addClass("positioned")
+  }, 0)
+    
+  }) 
+  
+  
 
-        $('.image-popup-fit-width').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            image: {
-                verticalFit: false
-            }
-        });
+  
+})
 
-        $('.image-popup-no-margins').magnificPopup({
-            type: 'image',
-            closeOnContentClick: true,
-            closeBtnInside: false,
-            fixedContentPos: true,
-            mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-            image: {
-                verticalFit: true
-            },
-            zoom: {
-                enabled: true,
-                duration: 300 // don't foget to change the duration also in CSS
-            }
-        });
-
-        });
+$(document).on("click", ".img-c.active", function() {
+  let copy = $(this)
+  copy.removeClass("positioned active").addClass("postactive")
+  setTimeout(function() {
+    copy.remove();
+  }, 500)
+})
     </script>
 </html>
