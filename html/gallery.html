@@ -7,42 +7,39 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gallery</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/gallery.css">
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-    <script src="/js/jquery.js"></script>
-    <script src="/js/Gallery.js"></script>
-    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gallery</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/gallery.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/Gallery.js"></script>
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
 
 </head>
 
 <body id="body" class="animated fadeInUp">
-    <div id="body" class="padding_border">
-        <h1 id="title" class="title">
-            <a class="name" id="about" href="#">Michael Buglione</a>
-        </h1>
-        <h1 class="fav">
-            <p class="name">My Favorites<p>
-        </h1>
-        <div class="gallery">
-            <div class="img-w"><img src="../assets/Japan/1.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/2.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/3.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/27.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/5.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/6.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/13.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/22.jpg" alt=""/></div>
-            <div class="img-w"><img src="../assets/Japan/9.jpg" alt=""/></div>
- <!--       <div class="img-w"><img src="../assets/Japan/10.jpg" alt=""/></div>
+  <div id="body" class="padding_border">
+    <h1 id="title" class="title">
+      <a class="name" id="about" href="#">Michael Buglione</a>
+    </h1>
+    <h1 class="fav">
+      <p class="name">My Favorites<p>
+    </h1>
+    <div class="gallery">
+      <div class="img-w"><img src="../assets/Japan/1.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/2.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/3.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/27.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/5.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/6.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/13.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/22.jpg" alt="" /></div>
+      <div class="img-w"><img src="../assets/Japan/9.jpg" alt="" /></div>
+      <!--       <div class="img-w"><img src="../assets/Japan/10.jpg" alt=""/></div>
             <div class="img-w"><img src="../assets/Japan/11.jpg" alt=""/></div>
             <div class="img-w"><img src="../assets/Japan/12.jpg" alt=""/></div>
             <div class="img-w"><img src="../assets/Japan/13.jpg" alt=""/></div>
@@ -81,51 +78,52 @@
             <div class="img-w"><img src="../assets/Japan/46.jpg" alt=""/></div>
             <div class="img-w"><img src="../assets/Japan/47.jpg" alt=""/></div>
             --->
-        </div>
-        <h1 id="more" class="more">
-            <a class="name" id="link" href="#">See More</a>
-        </h1>
     </div>
+    <h1 id="more" class="more">
+      <a class="name" id="link" href="#">See More</a>
+    </h1>
+  </div>
 </body>
 <script>
-$(function() {
-  $(".img-w").each(function() {
-    $(this).wrap("<div class='img-c'></div>")
-    let imgSrc = $(this).find("img").attr("src");
-     $(this).css('background-image', 'url(' + imgSrc + ')');
+  $(function () {
+    $(".img-w").each(function () {
+      $(this).wrap("<div class='img-c'></div>")
+      let imgSrc = $(this).find("img").attr("src");
+      $(this).css('background-image', 'url(' + imgSrc + ')');
+    })
+
+
+    $(".img-c").click(function () {
+      let w = $(this).outerWidth()
+      let h = $(this).outerHeight()
+      let x = $(this).offset().left
+      let y = $(this).offset().top
+
+
+      $(".active").not($(this)).remove()
+      let copy = $(this).clone();
+      copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+      $(".active").css('top', y - 8);
+      $(".active").css('left', x - 8);
+
+      setTimeout(function () {
+        copy.addClass("positioned")
+      }, 0)
+
+    })
+
+
+
+
   })
-            
-  
-  $(".img-c").click(function() {
-    let w = $(this).outerWidth()
-    let h = $(this).outerHeight()
-    let x = $(this).offset().left
-    let y = $(this).offset().top
-    
-    
-    $(".active").not($(this)).remove()
-    let copy = $(this).clone();
-    copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
-    $(".active").css('top', y - 8);
-    $(".active").css('left', x - 8);
-    
-      setTimeout(function() {
-    copy.addClass("positioned")
-  }, 0)
-    
-  }) 
-  
-  
 
-  
-})
+  $(document).on("click", ".img-c.active", function () {
+    let copy = $(this)
+    copy.removeClass("positioned active").addClass("postactive")
+    setTimeout(function () {
+      copy.remove();
+    }, 500)
+  })
+</script>
 
-$(document).on("click", ".img-c.active", function() {
-  let copy = $(this)
-  copy.removeClass("positioned active").addClass("postactive")
-  setTimeout(function() {
-    copy.remove();
-  }, 500)
-})
-    </script>
 </html>
