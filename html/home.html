@@ -136,6 +136,15 @@
       cursor.removeClass("black");
       follower.removeClass("black");
     });
+    // Green circle
+    $(".tile").on("mouseenter", function () {
+      cursor.addClass("green");
+      follower.addClass("green");
+    });
+    $(".tile").on("mouseleave", function () {
+      cursor.removeClass("green");
+      follower.removeClass("green");
+    });
   </script>
 </body>
 
