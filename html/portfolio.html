@@ -1,42 +1,38 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
 <html class="no-js">
+<!--<![endif]-->
 
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Michael Buglione</title>
+  <title>Portfolio</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="/css/project_1.css" />
   <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/home.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="../js/jquery.js"></script>
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
 </head>
 <div class="cursor"></div>
 <div class="cursor-follower"></div>
 
-<body class="animated fadeInUp">
-  <div id="about" class="row">
-    <h1 id="title" class="title">
-      <a class="name" id="link" href="#">Michael Buglione</a>
-    </h1>
-    <img class="Selfie" src="../assets/20200308_220449.jpg" alt="Selfie" />
-    <h1 class="aboutMe">Who Am I?</h1>
-    <h2 class="about">
-      I am a Full-Stack/Frontend developer based in Buffalo NY. I am
-      interested in interactive design, user experience and new technologies.
-      I like art, music, and martial arts. Graduating with a general
-      engineering degree in software engineering gives me a great
-      understanding of many different sciences and engineering subjects. To
-      round myself out even more, I also have a minor in pre-law and have
-      skills in visual arts, such as drawing, film, and graphic design.
-      Currently, I am working in TDP program at M&T Bank. Most days I'm either
-      playing my Bass, Practice Muay Thai, or Working on an art project.
-    </h2>
-  </div>
+<body>
+  <script src="/js/project_1.js" async defer></script>
+
+  <body id="body" class="body">
+    <div id="about" class="padding_border">
+      <h1 id="title" class="title">
+        <a class="name" id="link" href="#">Michael Buglione</a>
+      </h1>
+    </div>
+  </body>
   <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-  <script src="../js/about.js"></script>
+  <script src="../js/home.js"></script>
   <script>
     var cursor = $(".cursor"),
       follower = $(".cursor-follower");
@@ -108,9 +104,15 @@
       cursor.removeClass("black");
       follower.removeClass("black");
     });
+    // Green circle
+    $(".tile").on("mouseenter", function () {
+      cursor.addClass("green");
+      follower.addClass("green");
+    });
+    $(".tile").on("mouseleave", function () {
+      cursor.removeClass("green");
+      follower.removeClass("green");
+    });
   </script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="../js/particle.js"></script>
-</body>
 
 </html>

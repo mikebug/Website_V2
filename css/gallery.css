@@ -53,7 +53,7 @@ body {
 
 .more {
   font-size: 24px;
-  padding: 24px;
+  padding: 24px 0px 24px 12px;
   width: 200px;
   text-align: center;
   margin: auto;
@@ -93,8 +93,8 @@ body {
   margin: auto;
   border-radius: 3px;
   overflow: hidden;
-  //position: relative;
 }
+
 .img-c {
   width: 200px;
   height: 200px;
@@ -102,6 +102,25 @@ body {
   display: inline-grid;
   position: relative;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 820px) {
+  .img-c {
+    margin: auto;
+    display: block;
+    pointer-events: none;
+  }
+  .name {
+    width: 200px;
+    margin: auto;
+  }
+  .fav {
+    margin: auto;
+    width: 200px;
+  }
+  .gallery {
+    width: auto;
+  }
 }
 
 .img-w {
