@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
 
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Portfolio</title>
+  <title>Michael Buglione</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/css/project_1.css" />
-  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="../js/jquery.js"></script>
+  <link rel="stylesheet" href="../css/protfolio.css" />
   <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
 </head>
 <div class="cursor"></div>
 <div class="cursor-follower"></div>
 
-<body>
-  <script src="/js/project_1.js" async defer></script>
-
-  <body id="body" class="body">
-    <div id="about" class="padding_border">
-      <h1 id="title" class="title">
-        <a class="name" id="link" href="#">Michael Buglione</a>
-      </h1>
+<body id="body" >
+  <div class="padding_border">
+    <h1 id="title" class="title">
+      <a class="name" id="link" href="#">Michael Buglione</a>
+    </h1>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="tiles">
+        <a class="tile alink proj1" id="link1" href="#">
+          <div class="details">
+            <span class="title2 alink">Miracle Ticket</span><span class="info">My Senior Design Porject/Start Up</span>
+          </div>
+        </a><a id="link2" class="tile 2link proj2" href="#">
+          <div class="details">
+            <span class="title2 alink">M&T Bank Currency Design System</span><span class="info">Working on the Front-End Design and Development of the M&T Bank Design System</span>
+          </div>
+        </a>
+      </div>
     </div>
-  </body>
+  </div>
   <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-  <script src="../js/home.js"></script>
+  <script src="../js/profolio.js"></script>
   <script>
     var cursor = $(".cursor"),
       follower = $(".cursor-follower");
@@ -114,5 +117,6 @@
       follower.removeClass("green");
     });
   </script>
+</body>
 
 </html>

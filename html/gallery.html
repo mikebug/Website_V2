@@ -18,8 +18,12 @@
   <script src="/js/jquery.js"></script>
   <script src="/js/Gallery.js"></script>
   <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-
+<script src="" async defer></script>
+<script src="../node_modules/gsap/umd/TweenMax.js"></script>
+<script src="../js/home.js"></script>
 </head>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
 
 <body id="body" class="animated fadeInUp">
   <div id="body" class="padding_border">
@@ -111,10 +115,6 @@
       }, 0)
 
     })
-
-
-
-
   })
 
   $(document).on("click", ".img-c.active", function () {
@@ -125,5 +125,88 @@
     }, 500)
   })
 </script>
+<script>
+  var cursor = $(".cursor"),
+      follower = $(".cursor-follower");
+
+  var posX = 0,
+      posY = 0;
+
+  var mouseX = 0,
+      mouseY = 0;
+
+  TweenMax.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function () {
+          posX += (mouseX - posX) / 9;
+          posY += (mouseY - posY) / 9;
+
+          TweenMax.set(follower, {
+              css: {
+                  left: posX - 12,
+                  top: posY - 12
+              }
+          });
+
+          TweenMax.set(cursor, {
+              css: {
+                  left: mouseX,
+                  top: mouseY
+              }
+          });
+      }
+  });
+
+  $(document).on("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+  });
+  // WHITE circle
+  $(".link").on("mouseenter", function () {
+      cursor.addClass("active");
+      follower.addClass("active");
+  });
+  $(".link").on("mouseleave", function () {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+  });
+  $(".name").on("mouseenter", function () {
+      cursor.addClass("active");
+      follower.addClass("active");
+  });
+  $(".name").on("mouseleave", function () {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+  });
+  // WHITE circle
+  $(".alink").on("mouseenter", function () {
+      cursor.addClass("white");
+      follower.addClass("white");
+  });
+  $(".alink").on("mouseleave", function () {
+      cursor.removeClass("white");
+      follower.removeClass("white");
+  });
+  // WHITE circle
+  $(".img-w").on("mouseenter", function () {
+      cursor.addClass("black");
+      follower.addClass("black");
+  });
+  $(".img-w").on("mouseleave", function () {
+      cursor.removeClass("black");
+      follower.removeClass("black");
+  });
+  // Green circle
+  $(".tile").on("mouseenter", function () {
+      cursor.addClass("green");
+      follower.addClass("green");
+  });
+  $(".tile").on("mouseleave", function () {
+      cursor.removeClass("green");
+      follower.removeClass("green");
+  });
+</script>
+
+
 
 </html>

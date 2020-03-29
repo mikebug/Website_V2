@@ -29,7 +29,7 @@ canvas {
 .row {
   padding: 50px;
   width: 900px;
-  height: 750px;
+  height: auto;
   margin: 5vh auto;
   border: solid #333;
   border-width: 1px;
@@ -46,6 +46,7 @@ canvas {
   .Selfie {
     width: 18rem !important;
     height: 18rem !important;
+    border-radius: 50%;
   }
 }
 
@@ -53,7 +54,8 @@ canvas {
   .row {
     margin: 1vh auto;
     border: none;
-    width: 450px;
+    width: 300px;
+    padding: 0;
   }
   body {
     overflow: auto;
@@ -71,8 +73,9 @@ canvas {
   }
 }
   .Selfie {
-    width: 150px !important;
-    height: 150px !important;
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 50%;
   }
 }
 
@@ -80,10 +83,11 @@ canvas {
   margin: 25px;
   height: 20rem;
   width: 20rem;
+  border-radius: 50%;
 }
 
 .aboutMe {
-  font-size: 24px;
+  font-size: 26px;
   padding: 25px;
 }
 
