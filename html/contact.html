@@ -13,14 +13,13 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/contact.css" />
+    <script src="/js/contact.js"></script>
     <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="/js/contact.js"></script>
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-
+<div class="circle"></div>
+<div class="circle-follow"></div>
 <body class="animated fadeInUp">
     <div id="body" class="padding_border">
         <h1 id="title" class="title">
@@ -139,91 +138,89 @@
         <p class="mail">Michael.B.Buglione@gmail.com</p>
         <p class="mail">Buffalo, NY</p>
     </div>
+ </body>
 
-    <script src="" async defer></script>
-    <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-    <script src="../js/home.js"></script>
-    <script>
-        var cursor = $(".cursor"),
-            follower = $(".cursor-follower");
 
-        var posX = 0,
-            posY = 0;
+<script src="../node_modules/gsap/umd/TweenMax.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<style>
+    
+    html {
+        background: #fff;
+    }
 
-        var mouseX = 0,
-            mouseY = 0;
 
-        TweenMax.to({}, 0.016, {
-            repeat: -1,
-            onRepeat: function () {
-                posX += (mouseX - posX) / 9;
-                posY += (mouseY - posY) / 9;
+    .link {
+        display: inline-block;
+    }
 
-                TweenMax.set(follower, {
-                    css: {
-                        left: posX - 12,
-                        top: posY - 12
-                    }
-                });
+    .circle {
+        position: fixed;
+        background-color: #333;
+        width: 10px;
+        height: 10px;
+        left: 3px;
+        top: -135px;
+        border-radius: 100%;
+        z-index: 1;
+        z-index: 10000;
+        transform: scale(1);
+    }
 
-                TweenMax.set(cursor, {
-                    css: {
-                        left: mouseX,
-                        top: mouseY
-                    }
-                });
-            }
-        });
+    .circle-follow {
+        position: fixed;
+        border: 1px solid #333;
+        width: 30px;
+        height: 30px;
+        left: -7px;
+        top: -145px;
+        border-radius: 100%;
+        z-index: 1;
+        user-select: none;
+        pointer-events: none;
+        z-index: 10000;
+        transform: scale(1);
+    }
+</style>
+<script>
+    var $circle = $('.circle'),
+        $follow = $('.circle-follow');
 
-        $(document).on("mousemove", function (e) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+    function moveCircle(e) {
+        TweenLite.to($circle, 0.3, {
+            x: e.clientX,
+            y: e.clientY
         });
-        // WHITE circle
-        $(".link").on("mouseenter", function () {
-            cursor.addClass("active");
-            follower.addClass("active");
+        TweenLite.to($follow, 0.7, {
+            x: e.clientX,
+            y: e.clientY
         });
-        $(".link").on("mouseleave", function () {
-            cursor.removeClass("active");
-            follower.removeClass("active");
+    }
+
+    function hoverFunc(e) {
+        TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 0
         });
-        $(".name").on("mouseenter", function () {
-            cursor.addClass("active");
-            follower.addClass("active");
+        TweenLite.to($follow, 0.3, {
+            scale: 3
         });
-        $(".name").on("mouseleave", function () {
-            cursor.removeClass("active");
-            follower.removeClass("active");
+    }
+
+    function unhoverFunc(e) {
+        TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 1
         });
-        // WHITE circle
-        $(".alink").on("mouseenter", function () {
-            cursor.addClass("white");
-            follower.addClass("white");
+        TweenLite.to($follow, 0.3, {
+            scale: 1
         });
-        $(".alink").on("mouseleave", function () {
-            cursor.removeClass("white");
-            follower.removeClass("white");
-        });
-        // WHITE circle
-        $(".details").on("mouseenter", function () {
-            cursor.addClass("black");
-            follower.addClass("black");
-        });
-        $(".details").on("mouseleave", function () {
-            cursor.removeClass("black");
-            follower.removeClass("black");
-        });
-        // Green circle
-        $(".tile").on("mouseenter", function () {
-            cursor.addClass("green");
-            follower.addClass("green");
-        });
-        $(".tile").on("mouseleave", function () {
-            cursor.removeClass("green");
-            follower.removeClass("green");
-        });
-    </script>
-</body>
+    }
+
+    $(window).on('mousemove', moveCircle);
+
+    $("a").hover(hoverFunc, unhoverFunc);
+
+</script>
 
 </html>

@@ -1,130 +1,141 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
 <html class="no-js">
+<!--<![endif]-->
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Michael Buglione</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="../css/about.css" />
-  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../css/home.css" />
 </head>
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
 
-<body class="animated fadeInUp">
-  <div id="about" class="row">
-    <h1 id="title" class="title">
-      <a class="name" id="link" href="#">Michael Buglione</a>
-    </h1>
-    <img class="Selfie" src="../assets/20200308_220449.jpg" alt="Selfie" />
-    <h1 class="aboutMe">Who Am I?</h1>
-    <h2 class="about">
-      I am a Full-Stack/Frontend developer based in Buffalo NY. I am
-      interested in interactive design, user experience and new technologies.
-      I like art, music, and martial arts. Graduating with a general
-      engineering degree in software engineering gives me a great
-      understanding of many different sciences and engineering subjects. To
-      round myself out even more, I also have a minor in pre-law and have
-      skills in visual arts, such as drawing, film, and graphic design.
-      Currently, I am working in TDP program at M&T Bank. Most days I'm either
-      playing my Bass, Practice Muay Thai, or Working on an art project.
-    </h2>
-    <h1 class="aboutMe">My Education</h1>
-    <h2 class="about">
-      Education
-      2015 - 2019
-      </h2>
-      <h2 class="about">Stevens Insitute Technology</h2>
-      <h2 class="about">Honours</h2>
-      <h2 class="about">B.E. Software Engineering with a concentration in User Experience</h2>
-      <h2 class="about">Minor in Pre-Law</h2>
-      <h2 class="about">Hoboken, New Jersey</h2>
-    
-    <h1 class="aboutMe">Work Experience</h1>
-    <h2 class="about"> Varsity Tutors Summer 2018 </h2>
-      <h2 class="about">M&T Bank 2019 - Present</h2>
-  </div>
-  <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-  <script src="../js/about.js"></script>
-  <script>
-    var cursor = $(".cursor"),
-      follower = $(".cursor-follower");
-
-    var posX = 0,
-      posY = 0;
-
-    var mouseX = 0,
-      mouseY = 0;
-
-    TweenMax.to({}, 0.016, {
-      repeat: -1,
-      onRepeat: function () {
-        posX += (mouseX - posX) / 9;
-        posY += (mouseY - posY) / 9;
-
-        TweenMax.set(follower, {
-          css: {
-            left: posX - 12,
-            top: posY - 12
-          }
-        });
-
-        TweenMax.set(cursor, {
-          css: {
-            left: mouseX,
-            top: mouseY
-          }
-        });
-      }
-    });
-
-    $(document).on("mousemove", function (e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-    // WHITE circle
-    $(".link").on("mouseenter", function () {
-      cursor.addClass("active");
-      follower.addClass("active");
-    });
-    $(".link").on("mouseleave", function () {
-      cursor.removeClass("active");
-      follower.removeClass("active");
-    });
-    $(".name").on("mouseenter", function () {
-      cursor.addClass("active");
-      follower.addClass("active");
-    });
-    $(".name").on("mouseleave", function () {
-      cursor.removeClass("active");
-      follower.removeClass("active");
-    });
-    // WHITE circle
-    $(".alink").on("mouseenter", function () {
-      cursor.addClass("white");
-      follower.addClass("white");
-    });
-    $(".alink").on("mouseleave", function () {
-      cursor.removeClass("white");
-      follower.removeClass("white");
-    });
-    // WHITE circle
-    $(".details").on("mouseenter", function () {
-      cursor.addClass("black");
-      follower.addClass("black");
-    });
-    $(".details").on("mouseleave", function () {
-      cursor.removeClass("black");
-      follower.removeClass("black");
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="../js/particle.js"></script>
+<body id="body">
+    <div class="circle"></div>
+    <div class="circle-follow"></div>
+    <div id="about" class="row">
+        <h1 id="title" class="title">
+          <a class="name" id="link" href="#">Michael Buglione</a>
+        </h1>
+        <img class="Selfie" src="../assets/20200308_220449.jpg" alt="Selfie" />
+        <h1 class="aboutMe">Who Am I?</h1>
+        <h2 class="about">
+          I am a Full-Stack/Frontend developer based in Buffalo NY. I am
+          interested in interactive design, user experience and new technologies.
+          I like art, music, and martial arts. Graduating with a general
+          engineering degree in software engineering gives me a great
+          understanding of many different sciences and engineering subjects. To
+          round myself out even more, I also have a minor in pre-law and have
+          skills in visual arts, such as drawing, film, and graphic design.
+          Currently, I am working in the TDP program at M&T Bank. Most days I'm either
+          playing my bass, practicing Muay Thai, or working on an art project.
+        </h2>
+        <h1 class="aboutMe">My Education</h1>
+        <h2 class="about">
+          Education
+          2015 - 2019
+          </h2>
+          <h2 class="about">Stevens Insitute Technology</h2>
+          <h2 class="about">Honours</h2>
+          <h2 class="about">B.E. Software Engineering with a concentration in User Experience</h2>
+          <h2 class="about">Minor in Pre-Law</h2>
+          <h2 class="about">Hoboken, New Jersey</h2>
+        
+        <h1 class="aboutMe">Work Experience</h1>
+        <h2 class="about"> Varsity Tutors Summer 2018 </h2>
+          <h2 class="about">M&T Bank 2019 - Present</h2>
+      </div>
 </body>
+
+<script src="../node_modules/gsap/umd/TweenMax.js"></script>
+<script src="../js/about.js"></script>
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<style>
+    html {
+        background: #fff;
+    }
+
+
+    .link {
+        display: inline-block;
+    }
+
+    .circle {
+        position: fixed;
+        background-color: #333;
+        width: 10px;
+        height: 10px;
+        left: -30px;
+        top: -30px;
+        border-radius: 100%;
+        z-index: 1;
+        z-index: 10000;
+        transform: scale(1);
+    }
+
+    .circle-follow {
+        position: fixed;
+        border: 1px solid #333;
+        width: 30px;
+        height: 30px;
+        left: -16px;
+        top: -16px;
+        border-radius: 100%;
+        z-index: 1;
+        user-select: none;
+        pointer-events: none;
+        z-index: 10000;
+        transform: scale(1);
+    }
+</style>
+<script>
+    var $circle = $('.circle'),
+        $follow = $('.circle-follow');
+
+    function moveCircle(e) {
+        TweenLite.to($circle, 0.3, {
+            x: e.clientX,
+            y: e.clientY
+        });
+        TweenLite.to($follow, 0.7, {
+            x: e.clientX,
+            y: e.clientY
+        });
+    }
+
+    function hoverFunc(e) {
+        TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 0
+        });
+        TweenLite.to($follow, 0.3, {
+            scale: 3
+        });
+    }
+
+    function unhoverFunc(e) {
+        TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 1
+        });
+        TweenLite.to($follow, 0.3, {
+            scale: 1
+        });
+    }
+
+    $(window).on('mousemove', moveCircle);
+
+    $("a").hover(hoverFunc, unhoverFunc);
+</script>
+
 
 </html>

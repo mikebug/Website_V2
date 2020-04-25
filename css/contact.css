@@ -39,8 +39,9 @@ html {
 }
 
 body {
-  height: 100%;
   width: 100%;
+  padding: 90px;
+  margin: 10vh auto;
 }
 
 .name {
@@ -85,7 +86,7 @@ html {
   padding: 4.8rem;
   text-align: center;
   width: 110rem;
-  margin-top: 10%;
+  margin-top: 10vh;
   max-width: 100%;
 }
 .soc li {

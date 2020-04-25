@@ -4,26 +4,151 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Project #2</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/project_1.css" />
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Miracle Ticket</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/project_1.css">
     <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
-  </head>
-  <body>
-    <script src="/js/project_1.js" async defer></script>
-  
-  <body id="body" class="body">
-        <div id="about" class="padding_border">
-          <h1 id="title" class="title">
-            <a class="name" id="link" href="#">Back</a>
-          </h1>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body id="body">
+    <div class="circle"></div>
+    <div class="circle-follow"></div>
+    <div id="about" class="padding_border animated fadeIn">
+        <h1 id="title" class="title">
+          <a class="name" id="link" href="#">Back</a>
+        </h1>
+        <h2 class="tit"> Miracle Ticket</h2>
+        <div class="scalper">
+          <div class="pic">
+            <img class="show" src="/assets/1.PNG" alt="">
           </div>
-        </body>
-  <script src="../node_modules/gsap/umd/TweenMax.js"></script>
-  <script src="../js/about.js"></script>
+          <div class="des">
+            Venues across america are facing a huge problem with the disconnect between ticketing systems and the venues themselves. Venues are not able to connect with what their customers needs and wants. When it comes to tickets, many Venues face the problem of failing to reach the market audiences and main hardcore fans due to the cumbersome ticketing software in today's market. 
+
+            Major players in digital ticketing service industry, such as eventbrite and ticketmaster dominate the market with exorbitant fees and complicated ticketing systems that at their core are anti-consumer.
+            
+            Hello, We are Miracle Ticket and we aim to provide a straightforward ticketing solution for venues via a fully customizable and integratable software solution.
+            
+            By streamlining the ticket delivery process we remove unnecessary costs undergone by venues, lowering the costs to consumer.
+            
+            So how does our system work to the benefit of venues and consumers?
+                          
+          </div>
+        </div>
+        <div class="scalper">
+          <div class="pic">
+            <img class="show" src="/assets/2p.PNG" alt="">
+          </div>
+          <div class="des">
+              Having an entirely digital ticketing system accessible through our progressive web app with a clean user interface with a focus on ticket accessibility for the consumers and our secure QR ticket validation system for venues.
+            
+              Tickets are entirely unique to the event and tied to the venue allowing for secure management of total ticket allotment. This allows the venues to validate each ticket has been used once removing the concern of duplicate or fake tickets being used for entry. While for consumers it removes the fear of being unable to attend an event, our system allows them to return the ticket as long as it within an hour of the event starting and ticket has not been used. 
+              
+              With over 35,000 small venues in the US (including bars, music events, comedy clubs, churches) there is a huge market for ticketing needs. Assume 25% (a quarter) of these venues adopt our system within the next 5 years, at $50 a month, we would be generating over 5 million ($5,250,000) a year in revenue. By keeping the barrier to entry low, venues won’t fear taking a worthwhile chance on our system. 
+          </div>
+        </div>
+        <div class="scalper">
+          <div class="pic">
+            <img class="show" src="/assets/3p.PNG" alt="">
+          </div>
+          <div class="des">
+              With a small venue being less than 1000 people, it breads a close community culture that will help snowball our service forward. By rapidly building brand in the ticketing service space we close the distance between big ticketing. With this momentum we can expand to more and more venues nationwide.
+            
+              We are only asking for 500 thousand ($500,000) in seed money. This allows us to develop a stabilized system that will work for any type of venue all across the US with any number of users and currencies.
+                          
+          </div>
+        </div>
+    </div>
+</body>
+
+<script src="../node_modules/gsap/umd/TweenMax.js"></script>
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<style>
+    html {
+        background: ##f08080;
+    }
+
+
+    .link {
+        display: inline-block;
+    }
+
+    .circle {
+        position: fixed;
+        background-color: #fff;
+        width: 10px;
+        height: 10px;
+        left: -5px;
+        top: -5px;
+        border-radius: 100%;
+        z-index: 1;
+        z-index: 10000;
+        transform: scale(1);
+    }
+
+    .circle-follow {
+        position: fixed;
+        border: 1px solid #fff;
+        width: 30px;
+        height: 30px;
+        left: -16px;
+        top: -16px;
+        border-radius: 100%;
+        z-index: 1;
+        user-select: none;
+        pointer-events: none;
+        z-index: 10000;
+        transform: scale(1);
+    }
+</style>
+<script>
+    var $circle = $('.circle'),
+        $follow = $('.circle-follow');
+
+    function moveCircle(e) {
+        TweenLite.to($circle, 0.3, {
+            x: e.clientX,
+            y: e.clientY
+        });
+        TweenLite.to($follow, 0.7, {
+            x: e.clientX,
+            y: e.clientY
+        });
+    }
+
+    function hoverFunc(e) {
+        TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 0
+        });
+        TweenLite.to($follow, 0.3, {
+            scale: 3
+        });
+    }
+
+    function unhoverFunc(e) {
+        TweenLite.to($circle, 0.3, {
+            opacity: 1,
+            scale: 1
+        });
+        TweenLite.to($follow, 0.3, {
+            scale: 1
+        });
+    }
+
+    $(window).on('mousemove', moveCircle);
+
+    $("a").hover(hoverFunc, unhoverFunc);
+</script>
+<script src="/js/project_1.js"></script>
 </html>

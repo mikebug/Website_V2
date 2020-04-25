@@ -25,10 +25,16 @@ time, mark, audio, video {
     vertical-align: baseline;
     font-family: Barlow !important;
 }
+text{
+    font-family: Barlow
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+body::-webkit-scrollbar {
+    display: none !important;
 }
 body {
 	line-height: 1;
